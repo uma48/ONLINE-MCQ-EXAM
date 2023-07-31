@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  
+</head>
+<style>
+    .navbar{
+    background-color:rgb(74, 0, 222);
+    border-radius: 12px;
+}
+button {
+padding: 8px 20px;
+background-color: #0db304;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+button.button,
+    button.button1 {
+        padding: 12px 30px; /* Adjust the padding as needed */
+        font-size: 18px; /* Adjust the font size as needed */
+    }
+
+button1 {
+padding: 8px 20px;
+background-color: #5405dc;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.navbar ul{
+    overflow: auto;
+}
+.navbar li{
+    float: left;
+    list-style: none;
+    margin: 20px 28px;
+}
+.navbar li a{
+    padding: 2px 2px;
+    text-decoration: none;
+    color: white;
+}
+.navbar li a:hover{
+    background: red;
+}
+body{
+background-image: url(Image1.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+
+    /* Previous styles... */
+    @media (max-width: 768px) {
+      /* Adjust navigation bar for smaller screens */
+      .navbar ul {
+        display: flex;
+        flex-direction: column;
+      }
+      .navbar li {
+        float: none;
+        margin: 10px 0;
+      }
+    }
+    .call-to-action {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    /* Add margin between the buttons */
+    .call-to-action button {
+      margin: 0 10px;
+    }
+  
+    footer {
+            background-color:#1901ce;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        footer li a:hover {
+            color: #ddd;
+        }
+        .countdown-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .countdown-container h2 {
+    margin: 0;
+  }
+
+  #countdown {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .announcements-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .announcements-container h2 {
+    margin-top: 0;
+  }
+
+  .announcements-container p {
+    font-weight: bold;
+  }
+  
+  </style>
+  
+  
+<body>
+    <header>
+        <nav class="navbar">
+            <ul style="font-size: 20px;" style="font-style: bold;">
+                <li ><a href="home.html">Home</a></li>
+                <li><a href="studenthome.html">Student</a></li>
+                <li><a href="teacherhome.html">Teacher</a></li>
+                <li><a href="adminhome.html">Admin</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+               
+            </ul>
+        </nav>
+        
+    </header>
+    <marquee behavior='alternate'><b><h1 style="color:yellow;">Welcome to Online MCQ Exam Portal</h1></b></marquee>
+    <div class="call-to-action">
+        <button class="button" onclick="redirectTo('studentlogin.html')">Student Login</button><span><span>
+        <button class="button1" onclick="redirectTo('teacherlogin.html')">Teacher Login</button>
+      </div><br><br><br>
+      <!-- Countdown Timer Section -->
+  <div class="countdown-container">
+    <h2>Next Exam Starts In:</h2>
+    <div id="countdown"></div>
+  </div><br><br><br>
+  <div class="announcements-container">
+    <h2>Announcements</h2>
+    <p>Important Announcement 1: Lorem ipsum dolor sit amet.</p>
+    <p>Important Announcement 2: Consectetur adipiscing elit.</p>
+    <!-- Add more announcements as needed -->
+  </div>
+</body>
+<script>
+    function redirectTo(page) {
+      window.location.href = page;
+    }
+  </script>
+  <script>
+    // Add this script at the end of the <body> or in the <head> with 'defer' attribute.
+  
+    // Set the date and time for the exam
+    const examDate = new Date('2023-08-10T09:00:00').getTime();
+  
+    // Update the countdown every second
+    const countdownElement = document.getElementById('countdown');
+    const countdownInterval = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = examDate - now;
+  
+      // Calculate days, hours, minutes, and seconds remaining
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+      // Display the countdown
+      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  
+      // If the countdown is over, display a message
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.innerHTML = 'Exam has started!';
+      }
+    }, 1000);
+  </script>
+  
+<footer>
+    <div class="footer-content">
+      <p>Online MCQ Exam Portal &copy; 2023</p>
+      <ul>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+    
+</html>

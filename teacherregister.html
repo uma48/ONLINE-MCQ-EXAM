@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .navbar{
+            background-color:rgb(74, 0, 222);
+            border-radius: 12px;
+        }
+        button {
+    padding: 8px 20px;
+    background-color: #0db304;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button1 {
+    padding: 8px 20px;
+    background-color: #5405dc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+        .navbar ul{
+            overflow: auto;
+        }
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 20px 28px;
+        }
+        .navbar li a{
+            padding: 2px 2px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            background: red;
+        }
+        body{
+    background-image: url(Image1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    </style>
+    <style>
+        
+
+.body1 {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    padding-bottom: 80px; 
+}
+
+.login-container h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+footer {
+            background-color: #1901ce;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* Set the position to "fixed" */
+    bottom: 0;
+    left: 0;
+    right: 0;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        footer li a:hover {
+            color: #ddd;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul style="font-size: 20px;" style="font-style: bold;">
+                <li ><a href="home.html">Home</a></li>
+                <li><a href="studenthome.html">Student</a></li>
+                <li><a href="teacherhome.html">Teacher</a></li>
+                <li><a href="adminhome.html">Admin</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact Us</a></li>
+               
+            </ul>
+        </nav>
+        
+    </header>
+   
+   
+    
+</body><center>
+<body class="body">
+    <section class="login-container">
+        <h1><b><u>Teacher Registeration</u></b></h1>
+        <form action="teacherregister.jsp">
+            <div class="form-group">
+                <label for="username"><b>Name:</b><span>*</span></label>
+                <input type="text" id="username" name="name"placeholder="Enter your name" required maxlength="50">
+            </div>
+            <div  class="form-group">
+                <label for="username"><b>Qualification:</b></label>
+                <select name="qualification"  class="form-group" >
+                    <option>Select Your Qualification</option>
+                    <option>B.sc</option>
+                    <option>B.tech</option>
+                    <option>Master Degree</option>
+                    <option>MBA</option>
+                    <option>MCA</option>
+                    <option>MA</option>
+                    <option>M.tech</option>
+                </select>
+            </div>
+            <div  class="form-group">
+            <p><b>Username:</b> <span>*</span></p>
+       <input type="text" name="username" placeholder="Enter your username" required maxlength="50">
+</div>
+
+            <div class="form-group">
+                <label for="password"><b>Password:</b><span>*</span></label>
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required maxlength="10">
+            </div>
+            <label for="gender"><b>Gender:</b><span>*</span></label><br><br>
+            <input type="radio" id="gender" name="sex" value="Male"required>Male
+            <input type="radio" id="gender" name="sex" value="Female"required>Female<br><br>
+            <div class="form-group">
+            <label for="age"><b>Age:</b></label><br>
+            <input type="text" id="username" name="age" placeholder="Enter your Age" required maxlength="2">
+        </div>
+        <div class="form-group">
+            <label for="contactno"><b>Contact No</b></label><br>
+            <input type="text" id="contact no" name="contactno" placeholder="Enter your Contact Number" required maxlength="10" >
+        </div>    
+        <div class="form-group">
+            <label for="email"><b>Email id:</b></label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your Email id" required maxlength="50" >
+        </div>   
+        <div class="form-group">
+        <p><b>State</b><span>*</span></p>
+       <select name="state" >
+         <option>Select Your State</option>
+         
+	<option>Andhra Pradesh</option>
+    <option>Arunachal Pradesh</option>
+    <option>Assam</option>
+    <option>Bihar</option>
+    <option>Chhattisgarh</option>
+    <option>Goa</option>
+    <option>Gujarat</option>
+    <option>Haryana</option>
+    <option>Himachal Pradesh</option>
+    <option>Jharkhand</option>
+    <option>Karnataka</option>
+    <option>Kerala</option>
+    <option>Maharashtra</option>
+    <option>Madhya Pradesh</option>
+    <option>Manipur</option>
+    <option>Meghalaya</option>
+    <option>Mizoram</option>
+    <option>Nagaland</option>
+    <option>Odisha</option>
+    <option>Punjab</option>
+    <option>Rajasthan</option>
+    <option>Sikkim</option>
+    <option>Tamil Nadu</option>
+    <option>Tripura</option>
+    <option>Telangana</option>
+    <option>Uttar Pradesh</option>
+    <option>Uttarakhand</option>
+    <option>West Bengal</option>
+         
+         
+     </select>
+         
+    </div>
+    <div class="form-group">
+
+    <p><b>Specialization:</b> <span>*</span></p>
+       <input type="text" name="specialization" placeholder="Enter your Specialization" required maxlength="50" class="box">
+       <p><b>Experience:</b> <span>*</span></p>
+       <p>(Years)<span></span></p>
+
+       <input type="text" name="experience" placeholder="Enter your Experience" required maxlength="50" class="box"></div>
+
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        <p class="link">Already have an account <a href="teacherlogin.html">Login now </a></p>
+    </section> 
+    <footer>
+    <div class="footer-content">
+      <p>Online MCQ Exam Portal &copy; 2023</p>
+      <ul>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+    
+</body></center>
+
+</html>
