@@ -10,7 +10,7 @@
         /* Global styles */
         body {
             margin: 0;
-            padding: 0;
+            padding: 1;
             font-family: Arial, sans-serif;
         }
         
